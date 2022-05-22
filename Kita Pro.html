@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kita Project : Beta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <link href="fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <style>
+          body, a,p {font-family: 'Roboto', sans-serif;}
+          .borderbottom {border-bottom: 1px solid #F7F2E7}
+          #kolomhalo {background: #FEFEFE; color: #333;padding: 200px 90px 170px}
+          #kolomhalo .row p {font-size: 18px}
+          #kolomhalo h1 {font-family: 'Rubik Mono One', sans-serif;}
+          #anggota {max-width: 100%; overflow: hidden}
+          .anggotah1 {text-align: center;margin: 0;font-family: 'Staatliches', cursive;background: #FEFEFE}
+          .anggotah1 h1 {font-size: 60px;background: #797A7E;color:#eee;margin: 0;width: 200px;margin: auto}
+          #anggota .row {text-align: center;color: #fff;padding: 0}
+          #anggota .row .gambar {position: relative;height: 100%px;overflow: hidden;width: 100%;margin: auto;filter: grayscale(100%);-webkit-filter: grayscale(100%);transition: .3s}
+          #anggota .row .gambar:hover {filter: none;-webkit-filter: none;}
+          #anggota .row h1 {font-size: 20px; padding: 5px 0;margin-bottom: 0;}
+          #anggota .row .satu {position: absolute;width: 100%;height: 100%;line-height: 50%;background: rgb(0,0,0,.2); transition: .3s;opacity: 0;display: flex;flex-direction: column;justify-content: center}
+          #anggota .row .satu:hover {opacity: 1}
+          #anggota .row img {max-width: 100%;transition: all .3s ease-in-out}
+          .hidden {overflow: hidden}
+          #project {background: #111;text-align: center;height: 100vh;display: flex;justify-content: center;color: #eee}
+          .kapabilitas {width: 55%;margin: auto;font-size: 1.2em}
+          #wwd {background: #fefefe;padding: 15px 15px 0 15px}
+          #wwd .konten img {max-width: 100%;border-radius: 5px;filter: grayscale(100%);-webkit-filter: grayscale(100%);transition: .2s}
+          #wwd .konten:hover > img {filter: none;-webkit-filter: none;}
+          #wwd h1 {font-size: 3em;padding: 8px 0;font-family: 'Staatliches', cursive;text-transform: uppercase;text-align: center;color: #212529}
+          #wwd .row h2 {font-size: 1.2em;text-align: center;margin: 10px 0}
+          #wwd .row .konten {background: #eee;padding: 15px;height: 100%;border-radius: 5px;text-align: center}
+          #wwd p {text-align: center;font-size: .9em;margin-bottom: 50px}
+          #wwd .konten {position: relative;overflow: hidden}
+          #wwd .konten a {color: #fefefe}
+          #kontak {text-align: center;overflow: hidden }
+          .bungkuskontak {background: #131313;padding: 50px 0;word-spacing: 30px}
+          .bungkuskontak a {text-decoration: none;font-size: 36px;color:#333;border-radius: 50%;transition: all .3s ease-in-out}
+          .bungkuskontak a:hover {color:#FEFEFE}
+          .bungkuskontak h1 {word-spacing: 0;font-size: 25px;color: #FEFEFE}
+          #kontakh1 {text-align: center;color: #111;padding: 20px 0;margin: 0;font-family: 'Bebas Neue', cursive;background: #FEFEFE;}
+          #kontakh1:before {content: ""; width: 5px; height: 50px;background: #111;position: absolute;transform: translate(-106.7px,45px)}
+          #kontakh1:after {content: ""; width: 5px; height: 50px;background: #111;position: absolute;transform: translate(100.7px,-23px)}
+          #kontakh1 h1 {font-size: 50px;}
+          #mulai {background: #111; padding: 50px 0;text-align: center}
+          #mulai h1, #mulai p {margin-bottom: 30px}
+          #mulai .btn {padding: 12px 24px; border: solid 1px #ddd;color: #ddd;transition: .2s;border-radius: 0}
+          #mulai .btn:hover {color: #212529;border: solid 1px #212529;background: #aaa}
+          .isimulai {width: 60%;margin: auto;color: #ddd}
+          #kredit {background: #111;padding: 7px 0; text-align: center;color: #333;font-size: .9em}
+          #kredit p {margin-bottom: 0}
+          .kredit a {color: #333;transition: all .3s ease-in-out;text-decoration: none}
+          #kredit:hover > .isikredit a {color:#FEFEFE}
+          #kontak:hover + #kredit a {color:#FEFEFE}
+          .merah {background: red}
+          .tombol {position: absolute;bottom: 0;background: #797A7E;width: 100%;left: 0;font-size: 1em;padding: 8px 0;transition: .3s}
+          .tombol:hover{background: #555}
+          .margin25 {margin-bottom: 75px}
+          .navbar-toggler {border: none}
+          .navbar-toggler:focus {box-shadow: none}
+          @media screen and (max-width:768px) {
+          .pembatas {border-left: none;border-right: none}
+          .pembataskanan {border-right:none}
+          }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg borderbottom fixed-top" style="background: #FEFEFE">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-family: 'Staatliches', cursive">Kita Project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active page-scroll" aria-current="page" href="#kolomhalo">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#anggota">Tim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="#wwd">Kami Mengerjakan</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link page-scroll" href="#mulai">Mulai</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div id="kolomhalo">
+  <div class="row">
+     <div class="col-lg-4 col-md-6">
+      <h1>Tak kenal maka tak kenal jua...</h1>
+     </div>
+     <div class='col-lg-7 offset-lg-1 col-md-6'>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nostrum, magni quas cumque expedita excepturi quisquam optio asperiores distinctio quae sapiente, vel quidem illo perferendis pariatur incidunt atque nemo sint corporis, temporibus ratione perspiciatis quam tempore facere! Quibusdam, nemo commodi dolorem necessitatibus nihil esse omnis, ipsa hic consectetur officiis inventore tempore perspiciatis excepturi eligendi vitae. Porro accusantium, similique odit ratione veritatis perspiciatis reprehenderit facilis, impedit esse vitae culpa nostrum ducimus necessitatibus iusto optio nemo tempora, voluptates provident! Dignissimos, minima? Atque voluptas recusandae rem quaerat veritatis omnis aspernatur voluptate debitis quia, ipsa, est repellendus architecto accusamus autem culpa perferendis, cumque accusantium!</p>
+      </div>
+      </div>
+    </div>
+ <div id="anggota">
+        <div class="row">
+     <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 p-0">
+         <div class='gambar'><span class="satu"><h1>Messi</h1><p>Relasi Publik / / Fotografer / / Videografer</p></span><img src="messiimg.jpg"/></div>
+         
+     </div>
+          <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 p-0">
+              <div class='gambar'><span class="satu"><h1>Ronaldo</h1><p>Fotografer / / Videografer / / Editor</p></span><img src="ronaldoimg.jpg"/>
+            </div>
+     </div>
+          <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 p-0">
+              <div class='gambar'><span class="satu"><h1>Salah</h1><p>Produksi Audio / / Recording</p></span><img src="Kitaimg.png"/></div>
+              
+     </div>
+          <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 p-0">
+              <div class='gambar'><span class="satu"><h1>Maguire</h1><p>Fotografer / / Videografer</p></span><img src="maguire.jpg"/></div>
+              
+     </div>
+      </div>
+    </div>
+<div id="project" class="hidden">
+  <div class="kapabilitas">      
+<p>Kapabilitas kami sebagai penyedia jasa dalam industri kreatif dan juga jaringan melayani <i>customer</i> dalam jangkauan yang luas. Kami terdiri dari individu yang memiliki basis latar belakang yang cukup komplit sebagai sebuah tim.<br/><br/>Dalam perjalanan kami menyediakan layanan kreatif dan jaringan, kami telah dipercaya beberapa perusahaan swasta dan instansi pemerintah. Sehingga tentu kami bisa menjadi rekan kerja anda dalam kesempatan selanjutnya.</p>
+  </div> 
+</div>
+      <div id="wwd" class="hidden">
+          <h1>Kami Mengerjakan</h1>
+      <div class="row">
+          <div class="mb-3 col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="konten">
+                  <img src="Carousel/6.jpeg">
+                  <h2>Fotografi</h2>
+                  <p>Kami menyediakan layanan fotografi untuk bermacam acara. Wedding (preweddign-wedding), acara keluarga, acara perusahaan, dan lain-lain.</p>
+                  <a href="#" title="Cek Selengkapnya"><div class="tombol"><i class="fas fa-external-link-alt"></i></div></a>
+              </div>
+                  </div>
+                  <div class="mb-3 col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                      <div class="konten">
+                  <img src="Carousel/7.jpg">
+                  <h2>Videografi</h2>
+                  <p>Kami menyediakan layanan videografi untuk bermacam acara. Wedding (preweddign-wedding), acara keluarga, acara perusahaan, dan lain-lain.</p>
+                  <a href="#" title="Cek Selengkapnya"><div class="tombol"><i class="fas fa-external-link-alt"></i></div></a>
+                      </div>
+                  </div>
+                  <div class="mb-3 col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6 ">
+                      <div class="konten">
+                  <img src="Carousel/8.jpg">
+                  <h2>Produksi Musik</h2>
+                  <p>Kami menyediakan layanan pembuatan musik termasuk aransemen, recording, mixing, hingga mastering.</p>
+                  <a href="#" title="Cek Selengkapnya"><div class="tombol"><i class="fas fa-external-link-alt"></i></div></a>
+                  </div>
+          </div>
+                  <div class="mb-3 col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                      <div class="konten">
+                  <img src="Carousel/9.jpg">
+                  <h2>Jaringan</h2>
+                  <p>Dalam bidang ini kami menyediakan pelayanan yang meliputi pemasangan mikrotik dan juga CCTV.</p>
+                  <a href="#" title="Cek Selengkapnya"><div class="tombol"><i class="fas fa-external-link-alt"></i></div></a>
+            </div>
+          </div>
+          </div>
+      </div>
+      <div id="mulai">
+          <div class="isimulai">
+          <h1>Apakah kami dapat membantu anda?</h1>
+          <p>Mungkin masih ada di benak pikir tentang rencana project anda, namun tidak terlalu dini untuk melibatkan kami. Kami dapat memberi saran dan membantu Anda di setiap tahap, jadi mari kita mulai percakapan hari ini. </p>
+          <a href="#" class="btn">Hubungi Kami</a>
+          </div>
+      </div>
+<div id="kontak">
+    <div class="bungkuskontak">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+    </div> 
+<div id="kredit" class="kredit">
+    <div class="isikredit">Diberdayakan oleh <a href="#">Kita Project</a></div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src='https://rawgit.com/brayenid/borneoscript3/master/jquery.easing.1.3.js'></script>
+<script>
+$('.page-scroll').on('click',function(e){
+
+  var href = $(this).attr('href');
+  
+  var bungkusanhref = $(href);
+
+  $('html, body').animate({
+    scrollTop: bungkusanhref.offset().top - 50}, 1000, 'easeOutExpo');
+e.preventDefault()
+});
+</script>
+    </body>
+</html>
